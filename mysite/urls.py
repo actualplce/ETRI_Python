@@ -1,16 +1,18 @@
+from django.conf.urls import include,url
 from django.contrib import admin
 from django.urls import path, include
+from django.conf.urls.static import static #추가
+from django.conf import settings #추가 #static(settings~부분활성화.
 from .views import HomeView     #추가
 
-# from bookmark.views import BookmarkLV, BookmarkDV
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='home'),       #추가(메인페이지)
     path('bookmark/', include('bookmark.urls')),  #추가됨, include가있어야 다른 app에 연결가능.
     path('blog/', include('blog.urls')),
-    #class-based views
-    # path('bookmark/', BookmarkLV.as_view(),name='index'),
-    # path('bookmark/<int:pk>/', BookmarkDV.as_view(), name='detail'),
+    path('photo/', include('photo.urls')), #추가
 
-]
+
+
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)  #추가, 포토앱.

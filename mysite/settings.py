@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bookmark.apps.BookmarkConfig', #추가
-    'blog.apps.BlogConfig',
+    'blog.apps.BlogConfig', #추가
+    'photo.apps.PhotoConfig',  #추가
 ]
 
 MIDDLEWARE = [
@@ -112,3 +113,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+MEDIA_URL = '/media/'    #추가됨.. photoApp
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
