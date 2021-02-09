@@ -1,14 +1,8 @@
-<!--(vDjBook)$ cd /home/shkim/pyDjango/ch99/bookmark/-->
-<!--(vDjBook)$ mkdir templates-->
-<!--(vDjBook)$ mkdir templates/bookmark-->
-<!--(vDjBook)$ cd templates/bookmark/-->
-<!--(vDjBook)$ vi bookmark_list.html-->
+{% extends 'base.html' %}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Django Bookmark List</title>
-</head>
+{% block title %}장고 즐 상세{% endblock %}
+
+{% block content %}
 
 <body>
 
@@ -25,5 +19,6 @@
 
 </body>
 </html>
+{% endblock %}
 
 

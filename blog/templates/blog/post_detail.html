@@ -1,3 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}장고 즐 상세{% endblock %}
+
+{% block content %}
+
+
 <h2>{{ object.title }}</h2>
 
 <p>
@@ -20,4 +27,4 @@
 <div>
     {{ object.content|linebreaks }}
 </div>
-
+{% endblock %}
