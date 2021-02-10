@@ -1,14 +1,3 @@
-# from django.views.generic import ListView, DetailView   #, TemplateView
-# from django.views.generic import ArchiveIndexView, YearArchiveView, MonthArchiveView
-# from django.views.generic import DayArchiveView, TodayArchiveView
-# from django.conf import settings
-#
-# from .models import Post
-#
-# from django.views.generic import FormView
-# from .forms import PostSearchForm
-# from django.db.models import Q
-# from django.shortcuts import render
 from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic import ArchiveIndexView, YearArchiveView, MonthArchiveView
 from django.views.generic import DayArchiveView, TodayArchiveView
@@ -63,6 +52,7 @@ class PostYAV(YearArchiveView):
 class PostMAV(MonthArchiveView):
     model = Post
     date_field = 'modify_dt'
+    month_format = '%m'   #추가
 
 
 class PostDAV(DayArchiveView):

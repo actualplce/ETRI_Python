@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',   #디자인기능추가
     'bookmark.apps.BookmarkConfig', #추가
     'blog.apps.BlogConfig', #추가
     'photo.apps.PhotoConfig',  #추가
@@ -95,7 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'   #'ko-kr'
+LANGUAGE_CODE = 'ko-kr'  #'ko-kr',en-us
 
 TIME_ZONE = 'UTC'
 
@@ -116,3 +117,6 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'    #추가됨.. photoApp
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+#LOGIN_URL = '/accounts/login/' <-디폴트값을 쓸거고, logout_redirect_url은 안사용해도되니까 밑에로씀.
+LOGIN_REDIRECT_URL = '/'    #로그인되면 홈화면으로가게끔.
