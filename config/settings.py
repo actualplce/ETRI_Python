@@ -13,7 +13,8 @@ SECRET_KEY = 'b_eeh(8b6bfv(iszqjt_30d8mldqv3ng04k*c3s9qc$9$8t9ql'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.compute.amazonaws.com',
+                 '127.0.0.1']
 
 
 # Application definition
